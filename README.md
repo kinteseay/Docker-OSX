@@ -14,9 +14,9 @@ Pull requests, suggestions very welcome!
 
 ```
 
-docker pull sickcodes/docker-osx
+docker pull kinteseay/docker-osx
 
-docker run --privileged -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix sickcodes/docker-osx
+docker run --privileged -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix kinteseay/docker-osx
 
 # press ctrl G if your mouse gets stuck
 
@@ -61,7 +61,7 @@ docker ps --all
 docker start abc123xyz567
 
 # if you have many containers, you can try automate it with filters like this
-# docker ps --all --filter "ancestor=sickcodes/docker-osx"
+# docker ps --all --filter "ancestor=kinteseay/docker-osx"
 
 ```
 
@@ -99,11 +99,11 @@ sudo yum install xorg-x11-server-utils
 # then run
 xhost +
 
-docker run --privileged -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix sickcodes/docker-osx ./OpenCore-Boot.sh
+docker run --privileged -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix kinteseay/docker-osx ./OpenCore-Boot.sh
 ```
 
 Alternative run, thanks @roryrjb
-```docker run --privileged --net host --cap-add=ALL -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev:/dev -v /lib/modules:/lib/modules sickcodes/docker-osx```
+```docker run --privileged --net host --cap-add=ALL -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev:/dev -v /lib/modules:/lib/modules kinteseay/docker-osx```
 
 Check if your hardware virt is on
 ```egrep -c '(svm|vmx)' /proc/cpuinfo```
