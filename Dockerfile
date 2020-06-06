@@ -34,7 +34,7 @@ FROM archlinux:latest
 MAINTAINER 'https://sick.codes' <https://sick.codes>
 
 # change disk size here or add during build, e.g. --build-arg VERSION=10.14.6 --build-arg SIZE=50G
-ARG SIZE=32G
+ARG SIZE=25G
 ARG VERSION=10.14.6
 
 # This fails on hub.docker.com
